@@ -13,7 +13,7 @@
             
             <div name="cuenta">
             <input type="submit" name="login" value="Iniciar sesion">
-            ¿No tienes cuenta? <a href="registro_fronted.php">Registrate</a>
+            ¿No tienes cuenta? <a href="../Registro/registro_fronted.php">Registrate</a>
             </div>
         </form>
     </body>
