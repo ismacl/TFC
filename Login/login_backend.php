@@ -27,7 +27,7 @@
         if (password_verify($contraseña_posted, $hash_guardado)) {
             session_start();
             $_SESSION['id_usuario'] = $only_row[0];
-            header('Location: ../Main/main.php');
+            header('Location: ../Main/main_fronted.php');
             exit();
 
             //Si la contraseña no coincide muestra un mensaje de error y se vuelve a repetir la pagina
