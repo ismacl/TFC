@@ -14,6 +14,11 @@ require 'main_backend.php';
     <h1>Bienvenido, <?php echo $usuario['nombre'].' '. $usuario['apellidos']; ?>!</h1>
     <p>Email:<?php echo $usuario['email'];?></p>
     <p>Fecha de registro: <?php echo $usuario['fecha_registro']; ?></p>
+
+    <h2>Acciones disponibles</h2>
+    <ul>
+        <li><a href="../ver_entrenamientos/ver_entrenamientos_fronted.php">Ver historial</a></li>
+    </ul>
 </body>
 
 </html>
