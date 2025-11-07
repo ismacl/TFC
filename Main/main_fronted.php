@@ -18,6 +18,7 @@ require 'main_backend.php';
     <h2>Acciones disponibles</h2>
     <ul>
         <li><a href="../ver_entrenamientos/ver_entrenamientos_fronted.php">Ver historial</a></li>
+        <li><a href="../añadir_entrenamiento/añadir_entrenamiento_fronted.php">Añadir entrenamiento</a></li>
     </ul>
 </body>
 
