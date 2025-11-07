@@ -21,6 +21,8 @@ require 'main_backend.php';
         <li><a href="../añadir_entrenamiento/añadir_entrenamiento_fronted.php">Añadir entrenamiento</a></li>
         <li><a href="../ver_tecnicas/ver_tecnicas_fronted.php">Ver tecnicas</a></li>
     </ul>
+
+    <a href="../logout/logout.php">Cerrar sesion</a>
 </body>
 
 </html>
