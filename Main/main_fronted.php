@@ -19,7 +19,7 @@ require 'main_backend.php';
     <ul>
         <li><a href="../ver_entrenamientos/ver_entrenamientos_fronted.php">Ver historial</a></li>
         <li><a href="../añadir_entrenamiento/añadir_entrenamiento_fronted.php">Añadir entrenamiento</a></li>
-        <li><a href="../ver_tecnicas/ver_tecnicas.php">Ver tecnicas</a></li>
+        <li><a href="../ver_tecnicas/ver_tecnicas_fronted.php">Ver tecnicas</a></li>
     </ul>
 </body>
 
