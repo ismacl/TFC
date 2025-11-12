@@ -6,7 +6,11 @@
 
         //Comprueba que ningun campo esta vacio
         if (empty($_POST['nombre']) or empty($_POST['apellidos']) or empty($_POST['email']) or empty($_POST['contraseña']) or empty($_POST['c_contraseña']) or empty($_POST['fecha_registro'])) {
-            echo "<script>alert('No puede haber campos vacios');</script>";
+            echo 
+            '<script>
+            alert("No puede haber campos vacios");
+            window.location ="registro_fronted.php";
+            </script>';
         } else {
             $nombre = $_POST['nombre'];
             $apellidos = $_POST['apellidos'];
@@ -67,8 +71,11 @@
 
                 //Muestra mensaje segun el resultado
             if ($consulta) {
-                echo '<div class="sucess">Usuario registrado correctamente</div>';
-                echo '<a href="../Login/login_fronted.php">Volver a Inicio de sesión</a>';
+                echo '<script>
+            alert("Usuario registrado correctamente");
+            window.location ="../Login/login_fronted.php";
+            </script>';
+                
             } else {
                 echo '<div class="alerta">Error al registrarse: '.mysqli_error($db).' </div>';
             }
