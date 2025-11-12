@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../imagenes/fondo_registro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    display: grid;
+    grid-template-columns: auto auto;
+
+}
+
+header .logo{
+    padding: 1%;
+}
+
+header .logo .logo_bjj{
+    width: 7%;
+}
+
+header .botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .botones a{
+    text-decoration: none;
+    color: white;
+    margin: 5%;
+}
+
+header .botones .login{
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: white;
+}
+
+.bocadillo{
+    position: relative;
+    display: inline-block;
+}
+
+.bocadillo_foto{
+    width: 25%;
+    margin-left: 42%;
+}
+
+.bocadillo_texto{
+    position: absolute;
+    color: #2c3e50;
+    top: 29%;
+    left: 45%;
+}
+
+.bocadillo_texto a{
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-left: 7%;
+}
+
+form{
+    background-color: #f2f2f2;
+    color: #2c3e50;
+    padding: 30px;
+    border-radius: 12px;
+    border-color: #dcdcdc;
+    box-shadow: #dcdcdc;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 5%;
+    margin-left: 14%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="date"] {
+	width:100%;
+	padding:10px;
+    margin-bottom: 15px;
+	border:1px solid #ccc;
+	border-radius:6px;
+	background-color:#f9f9f9;
+    font-size: 14px;
+}
+
+form input[type="submit"]{
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.principal{
+    display: grid;
+    grid-template-columns: 20% 70%;
+}
+
+.principal .panda{
+    margin-left: 45%;
+    width: 100%;
+    height: 100%;
+}
