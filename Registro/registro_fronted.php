@@ -14,7 +14,11 @@
             </div>
         </header>
         <div class="principal">
+        <div class="bocadillo">
+            <img class="bocadillo_foto" src="../imagenes/bocadillo.png">
+            <div class="bocadillo_texto">¿Ya tienes cuenta?<br> <a href="../Login/login_fronted.php">¡Inicia sesión aquí!</a></div>
             <img class="panda" src="../imagenes/panda_fondo.png" alt="panda">
+        </div>
         <form class="formulario" action="registro_backend.php" method="post">
            <h1>Registro</h1>
             <br>

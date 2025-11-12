@@ -43,6 +43,35 @@ header .botones .registro{
     text-decoration-color: white;
 }
 
+.principal .bocadillo{
+    position: relative;
+    display: inline-block;
+    padding-top: 26%;
+}
+
+.principal .bocadillo .bocadillo_foto{
+    width: 39%;
+    margin-left: 65%;
+}
+
+.principal .bocadillo .bocadillo_texto{
+    position: absolute;
+    color: #2c3e50;
+    top: 24%;
+    left: 69%;
+}
+
+.principal .bocadillo .bocadillo_texto a{
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-left: 1%;
+}
+
+.principal .bocadillo .panda{
+    width: 80%;
+    margin-left: 30%;
+}
 
 form{
     background-color: #f2f2f2;
@@ -54,7 +83,7 @@ form{
     width: 100%;
     max-width: 700px;
     margin-top: 5%;
-    margin-left: 14%;
+    margin-left: 5%;
 }
 
 form label {
@@ -88,11 +117,5 @@ form input[type="submit"]{
 
 .principal{
     display: grid;
-    grid-template-columns: 20% 70%;
-}
-
-.principal .panda{
-    width: 150%;
-    height: 100%;
-    margin-top: 5%;
+    grid-template-columns: 25% 75%;
 }
