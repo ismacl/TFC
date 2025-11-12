@@ -10,8 +10,8 @@
                 </a>
             </div>
             <div class="botones">
-                <a href="../login/login_fronted.php" class="login">Inicio de sesión</a>
-                <a href="registro_fronted.php" class="registro">Registro</a>
+                <a href="../Login/login_fronted.php" class="login">Inicio de sesión</a>
+                <a href="../Registro/registro_fronted.php" class="registro">Registro</a>
             </div>
         </header>
         <div class="bocadillo">
