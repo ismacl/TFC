@@ -5,7 +5,7 @@
     if (!empty($_POST['registro'])) {
 
         //Comprueba que ningun campo esta vacio
-        if (empty($_POST['nombre']) or empty($_POST['apellidos']) or empty($_POST['email']) or empty($_POST['contraseña']) or empty($_POST['c_contraseña']) or empty($_POST['fecha_registro'])) {
+        if (empty($_POST['nombre']) or empty($_POST['apellidos']) or empty($_POST['email']) or empty($_POST['contraseña']) or empty($_POST['c_contraseña'])) {
             echo 
             '<script>
             alert("No puede haber campos vacios");
@@ -17,7 +17,9 @@
             $email = $_POST['email'];
             $contraseña = $_POST['contraseña'];
             $c_contraseña = $_POST['c_contraseña'];
-            $fecha_registro = $_POST['fecha_registro'];
+
+            //Pone la fecha actual en la que te registras
+            $fecha_registro = date('Y-m-d');
 
             //Busca si el email ya esta registrado para evitar duplicados
            // $duplicado = "SELECT email from usuarios where email = '$email' ";

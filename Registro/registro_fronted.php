@@ -37,9 +37,6 @@
             <label for="c_contraseña">Confirma la contraseña</label>
             <input name="c_contraseña" type="password" placeholder="Confirmar Contraseña">
 
-            <label for="fecha_registo">Fecha de registro</label>
-             <input name="fecha_registro" type="date"> 
-
             <input type="submit" value="Registrarse" name="registro">
         </form>
         </div>
