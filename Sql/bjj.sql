@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 03-11-2025 a las 16:44:27
+-- Tiempo de generación: 13-11-2025 a las 17:56:59
 -- Versión del servidor: 10.11.14-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -43,7 +43,13 @@ CREATE TABLE `entrenamientos` (
 INSERT INTO `entrenamientos` (`id_entrenamiento`, `id_usuario`, `fecha`, `duracion`, `resumen`, `sensaciones`) VALUES
 (1, 1, '2025-10-28', 90, 'Entrenamiento libre, repasamos sumisiones básicas', 'Muy cansado pero aprendí mucho'),
 (2, 1, '2025-10-30', 120, 'Clase centrada en sumisiones y barridos desde guardia cerrada', 'Bien, pero me costó el control de muñeca'),
-(3, 2, '2025-11-01', 60, 'Practicamos derribos, sumisiones y barridos', 'Noté mejora en los equilibrios');
+(3, 2, '2025-11-01', 60, 'Practicamos derribos, sumisiones y barridos', 'Noté mejora en los equilibrios'),
+(4, 5, '2025-11-06', 80, 'Estuvimos haciendo tecnicas desde guardia cerrada y role 4 veces', 'Muy bien y aparte es la primera vez que consigo rolar 4 veces seguidas'),
+(5, 5, '2025-11-06', 80, 'Estuvimos haciendo tecnicas desde guardia cerrada y role 4 veces', 'Muy bien y aparte es la primera vez que consigo rolar 4 veces seguidas'),
+(6, 5, '2025-11-06', 80, 'Estuvimos haciendo tecnicas desde guardia cerrada y role 4 veces', 'Muy bien y aparte es la primera vez que consigo rolar 4 veces seguidas'),
+(7, 5, '2025-11-07', 80, 'Bien', 'Bien'),
+(8, 5, '2025-11-07', 80, 'Bien', 'Bien'),
+(9, 5, '2025-11-07', 80, 'Podria ir mejor', 'Podria ir mejor');
 
 -- --------------------------------------------------------
 
@@ -68,7 +74,19 @@ INSERT INTO `entrenamiento_tecnica` (`id_entrenamiento`, `id_tecnica`) VALUES
 (3, 1),
 (3, 2),
 (3, 3),
-(3, 4);
+(3, 4),
+(4, 1),
+(4, 2),
+(5, 1),
+(5, 2),
+(6, 1),
+(6, 2),
+(7, 1),
+(7, 2),
+(8, 1),
+(8, 2),
+(9, 3),
+(9, 4);
 
 -- --------------------------------------------------------
 
@@ -107,19 +125,21 @@ CREATE TABLE `usuarios` (
   `apellidos` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
   `contraseña` varchar(255) NOT NULL,
-  `fecha_registro` date NOT NULL
+  `fecha_registro` date NOT NULL,
+  `fecha_nacimiento` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `email`, `contraseña`, `fecha_registro`) VALUES
-(1, 'Ismael', 'Cabanas López', 'ismael@gmail.com', '1234', '2025-10-09'),
-(2, 'Elena', 'Rodríguez Seijo', 'elena@gmail.com', '4321', '2024-09-12'),
-(3, 'Pelayo', 'Garcia López', 'pelayo@gmail.com', 'qwerty', '2025-08-13'),
-(4, 'Gorka', 'Padin Sabio', 'gorka@gmail.com', '$2y$10$EmPCtusFexPrRD6DDmlYJeFHNIbOmHVQSIemI7FDWo.SMWLKztXBm', '2025-10-15'),
-(5, 'David', 'Garcia Soto', 'david@gmail.com', '$2y$10$04puLs5GpuYwPuwP4BW0NuJOWgJuvJYZNpvmi/x0dPdjAyFpX7w.W', '2025-10-16');
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `email`, `contraseña`, `fecha_registro`, `fecha_nacimiento`) VALUES
+(1, 'Ismael', 'Cabanas López', 'ismael@gmail.com', '1234', '2025-10-09', '0000-00-00'),
+(2, 'Elena', 'Rodríguez Seijo', 'elena@gmail.com', '4321', '2024-09-12', '0000-00-00'),
+(3, 'Pelayo', 'Garcia López', 'pelayo@gmail.com', 'qwerty', '2025-08-13', '0000-00-00'),
+(4, 'Gorka', 'Padin Sabio', 'gorka@gmail.com', '$2y$10$EmPCtusFexPrRD6DDmlYJeFHNIbOmHVQSIemI7FDWo.SMWLKztXBm', '2025-10-15', '0000-00-00'),
+(5, 'David', 'Garcia Soto', 'david@gmail.com', '$2y$10$04puLs5GpuYwPuwP4BW0NuJOWgJuvJYZNpvmi/x0dPdjAyFpX7w.W', '2025-10-16', '0000-00-00'),
+(21, 'Sergio', 'Orosa Rodriguez', 'sergio@gmail.com', '$2y$10$JFCjtRA./QX9aOI5Bn/4MOleReE7bHa9Asn8SO3lsdIFjhZz1FKmi', '2025-11-13', '2004-11-24');
 
 --
 -- Índices para tablas volcadas
@@ -160,7 +180,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `entrenamientos`
 --
 ALTER TABLE `entrenamientos`
-  MODIFY `id_entrenamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_entrenamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tecnicas`
@@ -172,7 +192,7 @@ ALTER TABLE `tecnicas`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Restricciones para tablas volcadas

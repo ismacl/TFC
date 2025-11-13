@@ -5,7 +5,7 @@
     <body>
         <header>
             <div class="logo">
-                <a href="registro_fronted.php" title="registro">
+                <a href="login_fronted.php" title="registro">
                 <img class="logo_bjj" src="../imagenes/logo_bjj_editado.png" alt="logo_bjj">
                 </a>
             </div>
