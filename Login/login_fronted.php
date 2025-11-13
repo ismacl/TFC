@@ -14,12 +14,12 @@
                 <a href="../Registro/registro_fronted.php" class="registro">Registro</a>
             </div>
         </header>
-        <div class="bocadillo">
-            <img class="bocadillo_foto" src="../imagenes/bocadillo.png">
-            <div class="bocadillo_texto">¿No tienes cuenta?<br> <a href="../Registro/registro_fronted.php">¡Regístrate aquí!</a></div>
-        </div>
         <div class="principal">
+        <div class="bocadillo">
+            <img class="bocadillo_foto" src="../imagenes/bocadillo_sin_fondo.png">
+            <div class="bocadillo_texto">¿No tienes cuenta?<br> <a href="../Registro/registro_fronted.php">¡Regístrate aquí!</a></div>
             <img class="panda" src="../imagenes/panda_fondo.png" alt="panda">
+        </div>
         <form action="login_backend.php" method="post">
             <h1>Iniciar sesión</h1>
             <br>

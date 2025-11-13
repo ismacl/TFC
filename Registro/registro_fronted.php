@@ -15,7 +15,7 @@
         </header>
         <div class="principal">
         <div class="bocadillo">
-            <img class="bocadillo_foto" src="../imagenes/bocadillo.png">
+            <img class="bocadillo_foto" src="../imagenes/bocadillo_sin_fondo.png">
             <div class="bocadillo_texto">¿Ya tienes cuenta?<br> <a href="../Login/login_fronted.php">¡Inicia sesión aquí!</a></div>
             <img class="panda" src="../imagenes/panda_fondo.png" alt="panda">
         </div>
