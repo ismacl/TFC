@@ -14,6 +14,7 @@ require 'main_backend.php';
     <h1>Bienvenido, <?php echo $usuario['nombre'].' '. $usuario['apellidos']; ?>!</h1>
     <p>Email:<?php echo $usuario['email'];?></p>
     <p>Fecha de registro: <?php echo $usuario['fecha_registro']; ?></p>
+    <p>Fecha de nacimiento: <?php echo $usuario['fecha_nacimiento'];?></p>
 
     <h2>Acciones disponibles</h2>
     <ul>

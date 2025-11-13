@@ -37,6 +37,9 @@
             <label for="c_contraseña">Confirma la contraseña</label>
             <input name="c_contraseña" type="password" placeholder="Confirmar Contraseña">
 
+            <label for="fecha_nacimiento">Fecha de nacimiento</label>
+            <input name="fecha_nacimiento" type="date" placeholder="Fecha de nacimiento">
+
             <input type="submit" value="Registrarse" name="registro">
         </form>
         </div>

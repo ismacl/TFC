@@ -5,7 +5,7 @@ require '../Conexion/conexion.php';
 $id = $_SESSION['id_usuario'];
 
 //Una consulta segura para obtener todos los datos del usuario y que se ejecuta y guarda los resultados en la variable $usuario
-$consulta = $db->prepare("SELECT nombre, apellidos, email, fecha_registro FROM usuarios WHERE id_usuario = ?");
+$consulta = $db->prepare("SELECT nombre, apellidos, email, fecha_registro, fecha_nacimiento FROM usuarios WHERE id_usuario = ?");
 $consulta -> bind_param("i", $id);
 $consulta -> execute();
 $result = $consulta->get_result();

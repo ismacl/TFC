@@ -5,7 +5,7 @@
     if (!empty($_POST['registro'])) {
 
         //Comprueba que ningun campo esta vacio
-        if (empty($_POST['nombre']) or empty($_POST['apellidos']) or empty($_POST['email']) or empty($_POST['contraseña']) or empty($_POST['c_contraseña'])) {
+        if (empty($_POST['nombre']) or empty($_POST['apellidos']) or empty($_POST['email']) or empty($_POST['contraseña']) or empty($_POST['c_contraseña']) or empty($_POST['fecha_nacimiento'])) {
             echo 
             '<script>
             alert("No puede haber campos vacios");
@@ -17,6 +17,7 @@
             $email = $_POST['email'];
             $contraseña = $_POST['contraseña'];
             $c_contraseña = $_POST['c_contraseña'];
+            $fecha_nacimiento = $_POST['fecha_nacimiento'];
 
             //Pone la fecha actual en la que te registras
             $fecha_registro = date('Y-m-d');
@@ -65,8 +66,8 @@
                // $sql = $db ->query("insert into usuarios(nombre, apellidos, email, contraseña, fecha_registro) values ('$nombre','$apellidos','$email','$contraseña_segura','$fecha_registro')");
 
                //Inserta el nuevo usuario en la base de datos
-                $consulta = $db -> prepare("insert into usuarios (nombre, apellidos, email, contraseña, fecha_registro) values (?, ?, ?, ?, ?)");
-                $consulta -> bind_param('sssss', $nombre, $apellidos , $email , $contraseña_segura , $fecha_registro);
+                $consulta = $db -> prepare("insert into usuarios (nombre, apellidos, email, contraseña, fecha_registro, fecha_nacimiento) values (?, ?, ?, ?, ?, ?)");
+                $consulta -> bind_param('ssssss', $nombre, $apellidos , $email , $contraseña_segura , $fecha_registro, $fecha_nacimiento);
                 $consulta -> execute();
 
                 $consulta-> close();
