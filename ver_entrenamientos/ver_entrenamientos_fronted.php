@@ -9,8 +9,12 @@ require'ver_entrenamientos_backend.php';
 ?>
 
 <html>
-    <head><meta charset="UTF-8"><title>Historial de Entrenamientos</title></head>
+    <head>
+    <meta charset="UTF-8"><title>Historial de Entrenamientos</title>
+    <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
+    </head>
     <body>
+        <?php include '../encabezado/encabezado.php';?>
         <h1>Mis entrenamientos</h1>
 
         <?php if (count($entrenamientos) > 0): ?>

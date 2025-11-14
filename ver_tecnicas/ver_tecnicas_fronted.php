@@ -16,8 +16,10 @@ $consulta = $db->query("SELECT nombre_tecnica, tipo, posicion, descripcion, enla
         <meta charset="UTF-8">
         <title>Listado de tecnicas</title>
         <link rel="stylesheet" href="estilos_tecnicas.css">
+        <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
     </head>
     <body>
+        <?php include '../encabezado/encabezado.php';?>
         <h1>Listado de tecnicas</h1>
 
         <table>

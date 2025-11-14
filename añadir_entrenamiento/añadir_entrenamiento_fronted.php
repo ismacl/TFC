@@ -20,6 +20,7 @@ while($fila = $consulta-> fetch_assoc()) {
 <head>
     <meta charset="UTF-8">
     <title>Añadir entrenamiento</title>
+        <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
 
 <!--Carga la hoja de estilos de Select2 -->
 <!-- Esta liberria define el aspecto del campo de seleccion con busqueda de las tecnicas-->
@@ -29,25 +30,9 @@ while($fila = $consulta-> fetch_assoc()) {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!--Carga la libreria Select2 que transforma el <select> en un campo con busqueda, etiquetas y seleccion multiple-->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 30px;
-    }
-
-    label {
-        font-weight: bold;
-    }
-
-    select, input, textarea {
-        margin-top: 5px;
-        margin-bottom: 15px;
-        width: 300px;
-    }
-</style>
 </head>
     <body>
+        <?php include '../encabezado/encabezado.php';?>
         <h1>Nuevo entrenamiento</h1>
 
         <form action="añadir_entrenamiento_backend.php" method="POST">

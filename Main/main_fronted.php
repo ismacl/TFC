@@ -9,8 +9,13 @@ require 'main_backend.php';
 ?>
 
 <html>
-    <head><meta charset="UTF-8"><title>Mi perfil</title></head>
+    <head>
+        <meta charset="UTF-8"><title>Mi perfil</title>
+        <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
+    </head>
 <body>
+    <?php include '../encabezado/encabezado.php';?>
+
     <h1>Bienvenido, <?php echo $usuario['nombre'].' '. $usuario['apellidos']; ?>!</h1>
     <p>Email:<?php echo $usuario['email'];?></p>
     <p>Fecha de registro: <?php echo $usuario['fecha_registro']; ?></p>
