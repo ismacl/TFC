@@ -12,6 +12,7 @@ require 'main_backend.php';
     <head>
         <meta charset="UTF-8"><title>Mi perfil</title>
         <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
+        <link rel="stylesheet" href="../footer/footer.css" type="text/css">
     </head>
 <body>
     <?php include '../encabezado/encabezado.php';?>
@@ -29,6 +30,8 @@ require 'main_backend.php';
     </ul>
 
     <a href="../logout/logout.php">Cerrar sesion</a>
+
+    <?php include '../footer/footer.php' ?>
 </body>
 
 </html>
