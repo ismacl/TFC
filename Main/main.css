@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    padding: 24px;
+}
+
+.mascota{
+    display: flex;
+    justify-content: center;
+}
+
+.mascota img{
+    width: 200%;
+    margin-left: 10%;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 15%;
+    width: 70%;
+    margin: auto;
+    margin-top: 20%;
+}
+
+.cabeza_perfil{
+    display: grid;
+    grid-template-columns: 100px auto;
+    align-items: center;
+    gap: 16px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.cabeza_perfil img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #3498db;
+}
+
+.cabeza_perfil h1{
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.cabeza_perfil .miembro{
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.boton_datos{
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.perfil_datos{
+    background-color: #f9fafb;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.perfil_datos p{
+    font-size: 15px;
+    color: #374151;
+}
+
+.editar{
+    grid-column: span 2;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #f39c12;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+}
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 35%;
+    padding-left: 14%;
+}
+
+.acciones a{
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    width: 60%;
+    margin-top: 5%;
+}
+
+.acciones .logout{
+    background-color: red;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

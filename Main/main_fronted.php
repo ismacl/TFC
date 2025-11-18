@@ -19,6 +19,11 @@ require 'main_backend.php';
     <?php include '../encabezado/encabezado.php';?>
 
 <main>
+
+<div class="mascota">
+    <img src="../imagenes/panda_perfil.png">
+</div>
+
 <div class="perfil">
     <div class="cabeza_perfil">
             <img src="../imagenes/foto_perfil.jpg" alt="foto de perfil">
@@ -28,9 +33,7 @@ require 'main_backend.php';
         </div>
     </div>
 
-    <div class="mascota">
-        <img src="../imagenes/panda_fondo.png">
-    </div>
+    <a href="#" class="boton_datos">Datos personales</a>
 
     <div class="perfil_datos">
         <p>Fecha de nacimiento: <?php echo $usuario['fecha_nacimiento'];?></p>
@@ -39,6 +42,7 @@ require 'main_backend.php';
         <p>Grado: <?php echo $usuario['grado']; ?></p>
         <a href="editar_cinturon.php" class="editar">Editar cinturon</a>
     </div>
+</div>
 
     <div class="acciones">
         <a href="../ver_entrenamientos/ver_entrenamientos_fronted.php">Ver historial</a>
@@ -46,7 +50,6 @@ require 'main_backend.php';
         <a href="../ver_tecnicas/ver_tecnicas_fronted.php">Ver técnicas</a>
         <a href="../logout/logout.php" class="logout">Cerrar sesión</a>
     </div>
-</div>
 </main>
 
     <?php include '../footer/footer.php' ?>
