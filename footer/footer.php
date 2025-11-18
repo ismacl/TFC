@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="footer.css" type="text/css">
 <script src="https://kit.fontawesome.com/5ab9ff1d93.js" crossorigin="anonymous"></script>
 <footer>
     <div class="contenido">

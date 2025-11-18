@@ -14,7 +14,7 @@ footer{
 
 .contenido{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 10% 80% 10%;
     align-items: center;
     text-align: center;
 }
