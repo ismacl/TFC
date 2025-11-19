@@ -40,7 +40,7 @@ require 'main_backend.php';
         <p>Email:<?php echo $usuario['email'];?></p>
         <p>Cinturon:<?php echo $usuario['cinturon'];?></p>
         <p>Grado: <?php echo $usuario['grado']; ?></p>
-        <a href="editar_cinturon.php" class="editar">Editar cinturon</a>
+        <a href="../editar_cinturon/editar_cinturon_fronted.php" class="editar">Editar cinturón</a>
     </div>
 </div>
 
