@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.tarjeta{
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.tarjeta h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+label {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+input[type="date"], input[type="number"], textarea, select {
+    padding: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    width: 100%;
+}
+
+.select2-container {
+    width: 100% !important;
+    max-width: 60% !important;
+}
+
+.select2-selection {
+    border-radius: 8px !important;
+    border: 1px solid #d1d5db !important;
+    padding: 6px !important;
+    min-height: 40px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.botones .guardar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botones .cancelar {
+    background-color: red;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+footer{
+    margin-top: auto;
+}

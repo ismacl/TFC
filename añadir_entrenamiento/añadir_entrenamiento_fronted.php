@@ -21,6 +21,8 @@ while($fila = $consulta-> fetch_assoc()) {
     <meta charset="UTF-8">
     <title>Añadir entrenamiento</title>
         <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
+        <link rel="stylesheet" href="../footer/footer.css" type="text/css">
+        <link rel="stylesheet" href="añadir_entrenamiento.css" type="text/css">
 
 <!--Carga la hoja de estilos de Select2 -->
 <!-- Esta liberria define el aspecto del campo de seleccion con busqueda de las tecnicas-->
@@ -33,6 +35,8 @@ while($fila = $consulta-> fetch_assoc()) {
 </head>
     <body>
         <?php include '../encabezado/encabezado.php';?>
+    <main>
+        <div class="tarjeta">
         <h1>Nuevo entrenamiento</h1>
 
         <form action="añadir_entrenamiento_backend.php" method="POST">
@@ -59,18 +63,24 @@ while($fila = $consulta-> fetch_assoc()) {
                 <?php endforeach; ?>
             </select><br>
 
-            <input type="submit" value="Guardar entrenamiento">
+            <div class="botones">
+            <input type="submit" value="Guardar entrenamiento" class="guardar">
+            <a href="../Main/main_fronted.php" class="cancelar">Cancelar</a>
+            </div>
+        
         </form>
+        </div>
+    </main>
 
-        <a href="../Main/main_fronted.php">Volver al perfil</a>
+    <?php include '../footer/footer.php' ?>
 
                 <!--Convierte el select en un campo con busqueda -->
         <script>
             $(document).ready(function() {
                 $('#tecnicas').select2({
-                    placeholder: "Busca y selecciona tecnicas",
+                    placeholder: " Busca y selecciona tecnicas",
                     allowClear: true,
-                    width: '300px'
+                    width: 'resolve'
                 });
             });
         </script>
