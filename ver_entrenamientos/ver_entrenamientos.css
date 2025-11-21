@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.tarjeta{
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 80%;
+    width: 100%;
+}
+
+.tarjeta h1{
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px
+}
+
+thead{
+    background-color: #3498db;
+    color: white;
+}
+
+th, td{
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+a.volver {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
