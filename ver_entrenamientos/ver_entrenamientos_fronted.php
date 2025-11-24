@@ -44,6 +44,26 @@ require'ver_entrenamientos_backend.php';
                 <?php endforeach; ?>
             </tbody>
         </table>
+
+        <?php if ($total_paginas > 1): ?>
+            <div class="paginacion">
+                <?php if ($pagina > 1): ?>
+                    <a href="?pagina=<?php echo $pagina -1; ?>">Anterior</a>
+                <?php endif; ?>
+
+                <?php for ($i = 1; $i <= $total_paginas; $i++): ?>
+                    <a href="?pagina=<?php echo $i; ?>"
+                  class="<?php echo ($i == $pagina) ? 'activo' : ''; ?> ">
+                    <?php echo $i; ?>
+                </a>
+                <?php endfor; ?>
+
+                <?php if ($pagina < $total_paginas): ?>
+                    <a href="?pagina=<?php echo $pagina + 1; ?>">Siguiente</a>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+        
         <?php else: ?>
             <p>No tienes entrenamientos registrados</p>
         <?php endif; ?>
