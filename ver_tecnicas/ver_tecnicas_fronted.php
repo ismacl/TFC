@@ -5,9 +5,6 @@ if(!isset($_SESSION['id_usuario'])) {
     exit();
 }
 require'ver_tecnicas_backend.php';
-
-//Consulta todas las tecnicas y selecciona los campos que se van a mostrar en la tabla
-$consulta = $db->query("SELECT nombre_tecnica, tipo, posicion, descripcion, enlace_video FROM tecnicas");
 ?>
 
 <html>
@@ -22,6 +19,12 @@ $consulta = $db->query("SELECT nombre_tecnica, tipo, posicion, descripcion, enla
         <?php include '../encabezado/encabezado.php';?>
         <main>
         <h1>Listado de tecnicas</h1>
+
+        <form method="get" class="buscador">
+            <input type="text" name="buscar" placeholder="Buscar tecnica"
+                value="<?php echo htmlspecialchars($buscar) ?>">
+            <button type="submit">Buscar</button>
+        </form>
 
         <table>
             <thead>
@@ -58,18 +61,18 @@ $consulta = $db->query("SELECT nombre_tecnica, tipo, posicion, descripcion, enla
         <?php if ($total_paginas > 1): ?>
             <div class="paginacion">
                 <?php if ($pagina > 1): ?>
-                    <a href="?pagina=<?php echo $pagina -1; ?>">Anterior</a>
+                    <a href="?pagina=<?php echo $pagina -1; ?>&buscar=<?php echo urlencode($buscar); ?>">Anterior</a>
                 <?php endif; ?>
 
                 <?php for ($i = 1; $i <= $total_paginas; $i++): ?>
-                    <a href="?pagina=<?php echo $i; ?>"
+                    <a href="?pagina=<?php echo $i; ?> &buscar=<?php echo urlencode($buscar); ?>"
                     class="<?php echo ($i == $pagina) ? 'activo' : ''; ?>">
                     <?php echo $i; ?>
                 </a>
                 <?php endfor; ?>
 
                 <?php if ($pagina < $total_paginas): ?>
-                    <a href="?paginna=<?php echo $pagina + 1 ?>">Siguiente</a>
+                    <a href="?pagina=<?php echo $pagina + 1 ?>">Siguiente</a>
                 <?php endif; ?>
             </div>
         <?php endif; ?>
