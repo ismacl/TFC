@@ -1,0 +1,76 @@
+@media (max-width: 1024px) {
+    main{
+        padding: 20px;
+        align-items: center;
+    }
+
+    .tarjeta {
+        max-width: 500px;
+        margin-top: 5%;
+    }
+
+    .select2-container {
+        max-width: 80% !important;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .botones .guardar,
+    .botones .cancelar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        padding: 12px;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 320px;
+        padding: 16px;
+        margin-top: 10%;
+    }
+
+    .tarjeta h2 {
+        font-size: 18px;
+    }
+
+    form {
+        gap: 10px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input[type="date"],
+    input[type="number"],
+    textarea,
+    select {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .select2-container {
+        max-width: 100% !important;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botones .guardar,
+    .botones .cancelar {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}

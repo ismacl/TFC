@@ -23,6 +23,7 @@ while($fila = $consulta-> fetch_assoc()) {
         <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
         <link rel="stylesheet" href="../footer/footer.css" type="text/css">
         <link rel="stylesheet" href="añadir_entrenamiento.css" type="text/css">
+        <link rel="stylesheet" href="añadir_entrenamiento_responsive.css" type="text/css">
 
 <!--Carga la hoja de estilos de Select2 -->
 <!-- Esta liberria define el aspecto del campo de seleccion con busqueda de las tecnicas-->
