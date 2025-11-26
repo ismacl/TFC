@@ -20,9 +20,9 @@ if(!isset($_SESSION['id_usuario'])) {
             <div class="presentacion">
                 <div class="slider">
                     <div class="slider2">
-                        <img src="../imagenes/fondo_registro.png" alt="imagen1">
-                        <img src="../imagenes/fondo_registro.png" alt="imagen1">
-                        <img src="../imagenes/fondo_registro.png" alt="imagen1">
+                        <img src="../imagenes/bjjcarrusel1.jpg" alt="imagen1">
+                        <img src="../imagenes/bjjcarrusel2.jpg" alt="imagen2">
+                        <img src="../imagenes/bjjcarrusel3.jpg" alt="imagen3">
                     </div>
                 </div>
                 <div class="presentacion_texto">
