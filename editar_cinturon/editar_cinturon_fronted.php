@@ -24,6 +24,7 @@ $consulta-> close();
     <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
     <link rel="stylesheet" href="../footer/footer.css" type="text/css">
     <link rel="stylesheet" href="editar_cinturon.css" type="text/css">
+    <link rel="stylesheet" href="editar_cinturon_responsive.css" type="text/css">
 </head>
 <body>
     <?php include'../encabezado/encabezado.php';?>

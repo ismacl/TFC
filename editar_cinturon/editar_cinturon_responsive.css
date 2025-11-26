@@ -1,0 +1,71 @@
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: auto;
+        gap: 20px;
+        margin-top: 4%;
+        padding: 16px;
+    }
+
+    .mascota img {
+        width: 50%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .tarjeta {
+        margin: 0 auto;
+        margin-top: 5%;
+        max-width: 350px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .botones .guardar,
+    .botones .cancelar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        grid-template-columns: auto;
+        margin-top: 2%;
+        padding: 12px;
+    }
+
+    .mascota img {
+        width: 70%;
+        max-width: 150px;
+        margin: 0 auto 20px;
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    form {
+        gap: 12px;
+    }
+
+    select {
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .botones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .botones .guardar,
+    .botones .cancelar {
+        width: 100%;
+        padding: 10px;
+    }
+}
