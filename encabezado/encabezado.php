@@ -8,7 +8,7 @@
     <div class="menu">
         <a href="#" class="#">Guia de compra</a>
         <a href="#" class="#">Acerca de nosotros</a>
-        <a href="#" class="#">Contacto</a>
+        <a href="../contacto/contacto_fronted.php" class="#">Contacto</a>
     </div>
     <div class="perfil_icono">
         <a href="../Main/main_fronted.php"><i class="fa-solid fa-user"></i></a>
