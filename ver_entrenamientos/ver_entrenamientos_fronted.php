@@ -14,6 +14,7 @@ require'ver_entrenamientos_backend.php';
     <link rel="stylesheet" href="../footer/footer.css" type="text/css">
     <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
     <link rel="stylesheet" href="ver_entrenamientos.css" type="text/css">
+    <link rel="stylesheet" href="ver_entrenamientos_responsive.css" type="text/css">    
     </head>
     <body>
         <?php include '../encabezado/encabezado.php';?>
@@ -35,11 +36,11 @@ require'ver_entrenamientos_backend.php';
             <tbody>
             <?php foreach ($entrenamientos as $entreno): ?>
                 <tr>
-                    <td><?php echo $entreno['fecha']; ?></td>
-                    <td><?php echo $entreno['duracion']; ?></td>
-                    <td><?php echo $entreno['resumen']; ?></td>
-                    <td><?php echo $entreno['sensaciones']; ?></td>
-                    <td><?php echo $entreno['tecnicas']; ?></td>
+                    <td  data-label="Fecha"><?php echo $entreno['fecha']; ?></td>
+                    <td  data-label="Duracion (min)"><?php echo $entreno['duracion']; ?></td>
+                    <td  data-label="Resumen"><?php echo $entreno['resumen']; ?></td>
+                    <td  data-label="Sensaciones"><?php echo $entreno['sensaciones']; ?></td>
+                    <td  data-label="Tecnicas"><?php echo $entreno['tecnicas']; ?></td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>

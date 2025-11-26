@@ -1,0 +1,95 @@
+@media (max-width: 1024px) {
+    main {
+        padding: 20px;
+        align-items: center;
+    }
+
+    .tarjeta {
+        max-width: 95%;
+        margin-top: 5%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .paginacion {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    a.volver {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    main {
+        padding: 12px;
+    }
+
+    .tarjeta {
+    width: 100%;
+    max-width: 340px;
+    padding: 16px;
+    margin-top: 10%;
+    }
+
+    .tarjeta h1 {
+        font-size: 18px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 12px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        background-color: #f9fafb;
+        padding: 8px;
+    }
+
+    td {
+        border: none;
+        padding: 6px;
+        text-align: left;
+        font-size: 13px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .paginacion {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .paginacion a{
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    a.volver {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
