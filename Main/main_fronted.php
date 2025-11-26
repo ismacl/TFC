@@ -14,6 +14,7 @@ require 'main_backend.php';
         <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
         <link rel="stylesheet" href="../footer/footer.css" type="text/css">
         <link rel="stylesheet" href="main.css" type="text/css">
+        <link rel="stylesheet" href="main_responsive.css" type="text/css">
     </head>
 <body>
     <?php include '../encabezado/encabezado.php';?>

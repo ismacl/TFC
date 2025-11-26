@@ -1,0 +1,99 @@
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 20px;
+    }
+
+    .mascota {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .mascota img {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .perfil {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .cabeza_perfil {
+        grid-template-columns: 80px auto;
+        padding: 16px;
+    }
+
+    .cabeza_perfil img {
+        width: 80%;
+        height: 80px;
+    }
+
+    .acciones {
+        padding: 0;
+        align-items: center;
+    }
+
+    .acciones a {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    footer {
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mascota {
+        width: 100%;
+        height: auto;
+    }
+
+    .mascota img {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .perfil {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .cabeza_perfil {
+        grid-template-columns: 80px auto;
+        padding: 12px;
+    }
+
+    .cabeza_perfil img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cabeza_perfil h1 {
+        font-size: 18px;
+    }
+
+    .perfil_datos p {
+        font-size: 14px;
+    }
+
+    .acciones {
+        padding: 0;
+        align-items: center;
+    }
+
+    .acciones a {
+        width: 80%;
+    }
+}
