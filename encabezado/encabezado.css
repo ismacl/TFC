@@ -28,17 +28,29 @@ header .logo .logo_bjj{
     max-width: 80px;
 }
 
+header .logo .logo_bjj:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
 header .menu{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+
 header .menu a{
     color: white;
     text-decoration: none;
     margin: 15px;
     font-weight: 500;
+}
+
+header .menu a:hover{
+    color: white;
+    transform: scale(1.1);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 header .perfil_icono{
@@ -50,4 +62,10 @@ header .perfil_icono{
 header .perfil_icono a{
     color: white;
     font-size: 22px;
+}
+
+header .perfil_icono a:hover{
+    color: #f1c40f;
+    transform: rotate(10deg) scale(1.2);
+    transition: color 0.3 ease, transform 0.3s ease;
 }

@@ -80,6 +80,12 @@ main{
     font-weight: 600;
 }
 
+.boton_datos:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 .perfil_datos{
     background-color: #f9fafb;
     padding: 16px;
@@ -88,6 +94,12 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.perfil_datos:hover{
+    box-shadow: 0 4px 12px #dcdcdc;
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .perfil_datos p{
@@ -105,6 +117,12 @@ main{
     text-decoration: none;
     font-weight: 600;
     text-align: center;
+}
+
+.editar:hover{
+    background-color: #e67e22;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .acciones {
@@ -127,8 +145,18 @@ main{
     margin-top: 5%;
 }
 
+.acciones a:hover{
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 .acciones .logout{
     background-color: red;
+}
+
+.acciones .logout:hover{
+    background-color: #c0392b;
 }
 
 footer{

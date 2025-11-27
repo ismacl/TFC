@@ -27,6 +27,12 @@ main{
     width: 100%;
 }
 
+.tarjeta:hover{
+    box-shadow: 0 4px 12px #dcdcdc;
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
 .tarjeta h2 {
     margin-bottom: 20px;
     color: #2c3e50;
@@ -82,6 +88,12 @@ input[type="date"], input[type="number"], textarea, select {
     cursor: pointer;
 }
 
+.botones .guardar:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 .botones .cancelar {
     background-color: red;
     color: white;
@@ -89,6 +101,12 @@ input[type="date"], input[type="number"], textarea, select {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+}
+
+.botones .cancelar:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 footer{

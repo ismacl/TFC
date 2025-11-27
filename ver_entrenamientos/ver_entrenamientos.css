@@ -11,6 +11,11 @@ body{
     min-height: 100vh;
 }
 
+tbody tr:hover{
+    background-color: #eaf4fb;
+    transition: background-color 0.3s ease;
+}
+
 main{
     flex: 1;
     display: flex;
@@ -24,6 +29,12 @@ main{
     padding: 24px;
     max-width: 80%;
     width: 100%;
+}
+
+.tarjeta:hover{
+    box-shadow: 0 4px 12px #dcdcdc;
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .tarjeta h1{
@@ -63,6 +74,12 @@ a.volver {
     font-weight: 600;
 }
 
+a.volver:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
 .paginacion {
     display: flex;
     justify-content: center;
@@ -77,6 +94,13 @@ a.volver {
     color: #2c3e50;
     text-decoration: none;
     font-weight: 600;
+}
+
+.paginacion a:hover {
+    background-color: #3498db;
+    color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .paginacion a.activo {

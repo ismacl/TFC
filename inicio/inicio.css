@@ -38,25 +38,30 @@ main {
             width: 90%;
         }
 
-        .presentacion .slider2{
-            width: 100%;
-            display: flex;
-            animation: mover2 6s steps(3) alternate infinite;
-        }
+.presentacion .slider2{
+    width: 100%;
+    display: flex;
+    animation: mover2 6s steps(3) alternate infinite;
+}
 
-        @keyframes mover2 {
-            0%{
-                margin-left: 0%;
-            }
-            100%{
-                margin-left: -300%;
-            }
-        }
+@keyframes mover2 {
+    0%{
+        margin-left: 0%;
+    }
+    100%{
+        margin-left: -300%;
+    }
+}
 
-        .presentacion .slider img{
-            width: 100%;
-            height: auto;
-        }
+.presentacion .slider img{
+    width: 100%;
+    height: auto;
+}
+
+.presentacion .slider img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
 
 .presentacion_texto h2 {
     color: #2c3e50;
@@ -77,6 +82,12 @@ main {
     border-radius: 8px;
     text-decoration: none;
     font-weight: 600;
+}
+
+.boton:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
 }
 
 .caracteristicas {
@@ -105,6 +116,12 @@ main {
     min-width: 220px;
     max-width: 250px;
     text-align: center;
+}
+
+.tarjeta:hover {
+    box-shadow: 0 4px 12px #dcdcdc;
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s ease transform 0.3s ease;
 }
 
 .tarjeta h3 {
