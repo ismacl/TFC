@@ -14,6 +14,7 @@ require'ver_tecnicas_backend.php';
         <link rel="stylesheet" href="ver_tecnicas.css" type="text/css">
         <link rel="stylesheet" href="../encabezado/encabezado.css" type="text/css">
         <link rel="stylesheet" href="../footer/footer.css" type="text/css">
+        <link rel="stylesheet" href="ver_tecnicas_responsive.css" type="text/css">
     </head>
     <body>
         <?php include '../encabezado/encabezado.php';?>
@@ -41,10 +42,10 @@ require'ver_tecnicas_backend.php';
                 <?php while ($fila = $consulta -> fetch_assoc()): ?>
                 <tr>
                 <!--Muestra cada campo de tecnicas -->
-                    <td><?php echo htmlspecialchars($fila['nombre_tecnica']); ?></td>
-                    <td><?php echo htmlspecialchars($fila['tipo']); ?></td>
-                    <td><?php echo htmlspecialchars($fila['posicion']); ?></td>
-                    <td><?php echo htmlspecialchars($fila['descripcion']); ?></td>
+                    <td data-label="Nombre"><?php echo htmlspecialchars($fila['nombre_tecnica']); ?></td>
+                    <td data-label="Tipo"><?php echo htmlspecialchars($fila['tipo']); ?></td>
+                    <td data-label="Posición"><?php echo htmlspecialchars($fila['posicion']); ?></td>
+                    <td data-label="Descripción"><?php echo htmlspecialchars($fila['descripcion']); ?></td>
                     <td>
                     <!-- Si hay enlace lo muestra como ver video y si no hay muestra no hay video-->
                         <?php if (!empty($fila['enlace_video'])): ?>
