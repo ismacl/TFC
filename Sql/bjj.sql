@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3307
--- Tiempo de generación: 13-11-2025 a las 17:56:59
+-- Tiempo de generación: 27-11-2025 a las 10:35:57
 -- Versión del servidor: 10.11.14-MariaDB
 -- Versión de PHP: 8.0.30
 
@@ -49,7 +49,10 @@ INSERT INTO `entrenamientos` (`id_entrenamiento`, `id_usuario`, `fecha`, `duraci
 (6, 5, '2025-11-06', 80, 'Estuvimos haciendo tecnicas desde guardia cerrada y role 4 veces', 'Muy bien y aparte es la primera vez que consigo rolar 4 veces seguidas'),
 (7, 5, '2025-11-07', 80, 'Bien', 'Bien'),
 (8, 5, '2025-11-07', 80, 'Bien', 'Bien'),
-(9, 5, '2025-11-07', 80, 'Podria ir mejor', 'Podria ir mejor');
+(9, 5, '2025-11-07', 80, 'Podria ir mejor', 'Podria ir mejor'),
+(10, 5, '2025-11-20', 72, 'Bien', 'Muy buenas'),
+(11, 5, '2025-11-21', 65, 'Bastante bien', 'Muy buenas'),
+(12, 5, '2025-11-21', 95, 'Derribos', 'Regular');
 
 -- --------------------------------------------------------
 
@@ -86,7 +89,34 @@ INSERT INTO `entrenamiento_tecnica` (`id_entrenamiento`, `id_tecnica`) VALUES
 (8, 1),
 (8, 2),
 (9, 3),
-(9, 4);
+(9, 4),
+(10, 2),
+(10, 3),
+(11, 1),
+(11, 2),
+(12, 3),
+(12, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mensajes_contacto`
+--
+
+CREATE TABLE `mensajes_contacto` (
+  `id_mensaje` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mensaje` text NOT NULL,
+  `fecha_mensaje` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Volcado de datos para la tabla `mensajes_contacto`
+--
+
+INSERT INTO `mensajes_contacto` (`id_mensaje`, `nombre`, `email`, `mensaje`, `fecha_mensaje`) VALUES
+(1, 'Ismael', 'ismael@gmail.com', 'sasasasas', '2025-11-25 13:37:06');
 
 -- --------------------------------------------------------
 
@@ -126,20 +156,22 @@ CREATE TABLE `usuarios` (
   `email` varchar(100) NOT NULL,
   `contraseña` varchar(255) NOT NULL,
   `fecha_registro` date NOT NULL,
-  `fecha_nacimiento` date NOT NULL
+  `fecha_nacimiento` date NOT NULL,
+  `cinturon` varchar(20) NOT NULL DEFAULT 'Blanco',
+  `grado` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `email`, `contraseña`, `fecha_registro`, `fecha_nacimiento`) VALUES
-(1, 'Ismael', 'Cabanas López', 'ismael@gmail.com', '1234', '2025-10-09', '0000-00-00'),
-(2, 'Elena', 'Rodríguez Seijo', 'elena@gmail.com', '4321', '2024-09-12', '0000-00-00'),
-(3, 'Pelayo', 'Garcia López', 'pelayo@gmail.com', 'qwerty', '2025-08-13', '0000-00-00'),
-(4, 'Gorka', 'Padin Sabio', 'gorka@gmail.com', '$2y$10$EmPCtusFexPrRD6DDmlYJeFHNIbOmHVQSIemI7FDWo.SMWLKztXBm', '2025-10-15', '0000-00-00'),
-(5, 'David', 'Garcia Soto', 'david@gmail.com', '$2y$10$04puLs5GpuYwPuwP4BW0NuJOWgJuvJYZNpvmi/x0dPdjAyFpX7w.W', '2025-10-16', '0000-00-00'),
-(21, 'Sergio', 'Orosa Rodriguez', 'sergio@gmail.com', '$2y$10$JFCjtRA./QX9aOI5Bn/4MOleReE7bHa9Asn8SO3lsdIFjhZz1FKmi', '2025-11-13', '2004-11-24');
+INSERT INTO `usuarios` (`id_usuario`, `nombre`, `apellidos`, `email`, `contraseña`, `fecha_registro`, `fecha_nacimiento`, `cinturon`, `grado`) VALUES
+(1, 'Ismael', 'Cabanas López', 'ismael@gmail.com', '1234', '2025-10-09', '0000-00-00', 'Blanco', 0),
+(2, 'Elena', 'Rodríguez Seijo', 'elena@gmail.com', '4321', '2024-09-12', '0000-00-00', 'Blanco', 0),
+(3, 'Pelayo', 'Garcia López', 'pelayo@gmail.com', 'qwerty', '2025-08-13', '0000-00-00', 'Blanco', 0),
+(4, 'Gorka', 'Padin Sabio', 'gorka@gmail.com', '$2y$10$EmPCtusFexPrRD6DDmlYJeFHNIbOmHVQSIemI7FDWo.SMWLKztXBm', '2025-10-15', '0000-00-00', 'Blanco', 0),
+(5, 'David', 'Garcia Soto', 'david@gmail.com', '$2y$10$04puLs5GpuYwPuwP4BW0NuJOWgJuvJYZNpvmi/x0dPdjAyFpX7w.W', '2025-10-16', '0000-00-00', 'Azul', 2),
+(21, 'Sergio', 'Orosa Rodriguez', 'sergio@gmail.com', '$2y$10$JFCjtRA./QX9aOI5Bn/4MOleReE7bHa9Asn8SO3lsdIFjhZz1FKmi', '2025-11-13', '2004-11-24', 'Blanco', 0);
 
 --
 -- Índices para tablas volcadas
@@ -158,6 +190,12 @@ ALTER TABLE `entrenamientos`
 ALTER TABLE `entrenamiento_tecnica`
   ADD PRIMARY KEY (`id_entrenamiento`,`id_tecnica`),
   ADD KEY `fk_tecnica` (`id_tecnica`);
+
+--
+-- Indices de la tabla `mensajes_contacto`
+--
+ALTER TABLE `mensajes_contacto`
+  ADD PRIMARY KEY (`id_mensaje`);
 
 --
 -- Indices de la tabla `tecnicas`
@@ -180,7 +218,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `entrenamientos`
 --
 ALTER TABLE `entrenamientos`
-  MODIFY `id_entrenamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_entrenamiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `mensajes_contacto`
+--
+ALTER TABLE `mensajes_contacto`
+  MODIFY `id_mensaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `tecnicas`
