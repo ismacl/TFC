@@ -1,4 +1,4 @@
 <?php
-header("Location: Registro/registro_fronted.php ");
+header("Location: Login/login_fronted.php ");
 exit;
 ?>
